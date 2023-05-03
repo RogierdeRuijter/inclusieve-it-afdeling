@@ -1,81 +1,110 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+const whitePeopleLabel = "waarom witten mensen";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+  <script>
+    const supported = HTMLElement.prototype.hasOwnProperty("popover");
+    if (!supported) {
+      const scriptEl = document.createElement("script");
+      scriptEl.src = "/src/polyfills/popover.min.js";
+      scriptEl.type = "module";
+      document.head.appendChild(scriptEl);
+
+      const linkEl = document.createElement("link");
+      linkEl.rel = "stylesheet";
+      linkEl.href = "/src/polyfills/popover.css";
+      document.head.appendChild(linkEl);
+    }
+  </script>
+  <main>
+    <h1>Een inclusieve IT afdeling</h1>
+    <h2>Door deze stappen te volgen</h2>
+    <p>
+      Op deze pagina probeer ik hetzelfde te bereiken als Viril Abloh met <a
+        href="https://virgilabloh.com/free-game/">Free Game</a
+      >. Hij geeft mentoorschap aan jonge zwarte mensen om hun te geven wat het
+      allerbelangrijkste wat zo broodnodig is om success te behalen.
+    </p>
+    <p>
+      Ik probeer hier hetzelfde te doen. Ik wil jonge witte mensen (<button
+        popovertarget="waarom-witte-mensen"
+        popovertargetaction="toggle">{whitePeopleLabel}</button
+      >) die hun IT afdeling diverser en inclusiever willen maken mentorschap
+      bieden om dit te doen. Door mijn eigen ervaring op dit gebied te delen.
+    </p>
+    <div id="waarom-witte-mensen" popover>
+      <h4>{whitePeopleLabel}</h4>
+      Ik denk dat de oplossing voor ons huidige probleem dat we niet genoeg diversiteit
+      hebben binnen de IT wereld moet komen van de mensen die nu de macht hebben
+      binnen deze plekken. Dit zijn momenteel witte mensen. Daarom is deze essay
+      gericht op witte mensen. Wij moeten een oplossingen vinden hoe wij de plekken
+      waar wij werken fijnere werkplekken maken voor mensen uit gemarganisaliseerde
+      groepen
+    </div>
+    <h3>Hoe inclsiever</h3>
+    <p>
+      Hieronder zullen verschillende stappen worden weergegeven hoe jij jou IT
+      afdeling inclusiever kan maken
+    </p>
+    <h4>Functie beschrijving</h4>
+    <p>
+      Kijk naar de functie beschrijvingen. Wat zijn de kwaliteiten die zijn
+      omschreven? Zijn dit kwaliteiten die klassiek als mannelijk worden
+      beschouwd? Kijk of je hier een diverser beeld van kan maken. Vaak zijn
+      kwaliteiten die niet worden meegenomen in programeer banen dingen als.
+      <ul>
+        <li>Zorg jij dat iedereen aan het word komt in een meeting?</li>
+        <li>
+          Als er oneinigheid in een team is zorg jij dan dat dit uitgepraat
+          wordt?
+        </li>
+        <li>Zorg jij dat er een balans is binnen het team?</li>
+      </ul>
+    </p>
+    <h4>Belicht diveristeit binnen huidige groep</h4>
+    <p>
+      Zoek naar manieren om binnen de huidige groep de diveristeit die er al is
+      te belichten. Dit helpt om aan te bewijzen dat er altijd veel verschil is
+      tussen de mensen. Het maakt vaak niet uit hoe ze hetzelfde lijken er zijn
+      altijd verschillen die onderbelicht blijven. Door deze verschillen te
+      belichten kreeg je een omgevingen waar verschillen tussen mensen gevierd
+      wordt. Als dit de cultuur is dan zal het makkelijker zijn om mensen met
+      een diversere achtergrond het gevoel te geven dat ze erbij horen.
+    </p>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 80ch;
+    line-height: 1.4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.1;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  [popover]::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  [popover] {
+    max-width: 60ch;
+    line-height: 1.4;
+    padding: 1em;
+    margin-trim: block;
+  }
+  [popover] :is(h1, h2, h3, h4, h5) {
+    line-height: 1.1;
+  }
 </style>
