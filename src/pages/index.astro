@@ -1,20 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { BASE } from "../consts";
 const whitePeopleLabel = "waarom witten mensen";
 ---
 
 <Layout title="Een inclusieve IT afdeling">
-  <script>
+  <script define:vars={{ BASE }}>
     const supported = HTMLElement.prototype.hasOwnProperty("popover");
     if (!supported) {
+      const base = BASE;
+
       const scriptEl = document.createElement("script");
-      scriptEl.src = "/src/polyfills/popover.min.js";
+      scriptEl.src = `${base}/src/polyfills/popover.min.js`;
       scriptEl.type = "module";
       document.head.appendChild(scriptEl);
 
       const linkEl = document.createElement("link");
       linkEl.rel = "stylesheet";
-      linkEl.href = "/src/polyfills/popover.css";
+      linkEl.href = `${base}/src/polyfills/popover.css`;
       document.head.appendChild(linkEl);
     }
   </script>
