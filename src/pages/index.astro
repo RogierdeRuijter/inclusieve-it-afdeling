@@ -7,19 +7,16 @@ const whitePeopleLabel = "waarom witten mensen";
   <script>
     const supported = HTMLElement.prototype.hasOwnProperty("popover");
     if (!supported) {
-      const scriptEl = document.createElement("script");
-      scriptEl.src =
-        "https://cdn.jsdelivr.net/npm/@oddbird/popover-polyfill@latest";
-      scriptEl.crossOrigin = "anonymous";
-      scriptEl.defer = true;
-      document.head.appendChild(scriptEl);
-
-      const linkEl = document.createElement("link");
-      linkEl.rel = "stylesheet";
-      linkEl.href =
-        "https://cdn.jsdelivr.net/npm/@oddbird/popover-polyfill@latest/dist/popover.css";
-      linkEl.crossOrigin = "anonymous";
-      document.head.appendChild(linkEl);
+      const button = document.querySelector("button");
+      button?.addEventListener("click", () => {
+        const id = button.getAttribute("popovertarget");
+        const element = document.getElementById(id);
+        if (element.getAttribute("show") === "") {
+          element.removeAttribute("show");
+        } else {
+          element.setAttribute("show", "");
+        }
+      });
     }
   </script>
   <main>
@@ -114,7 +111,7 @@ const whitePeopleLabel = "waarom witten mensen";
 
   /* This is to prevent a content shift before the polyfill loads */
   @supports not selector([popover]:open) {
-    [popover]:not(.\:popover-open, dialog[open]) {
+    [popover]:not([show]) {
       display: none;
     }
   }
