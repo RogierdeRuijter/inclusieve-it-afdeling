@@ -7,16 +7,29 @@ const whitePeopleLabel = "waarom witten mensen";
   <script>
     const supported = HTMLElement.prototype.hasOwnProperty("popover");
     if (!supported) {
-      const buttons = document.querySelectorAll("button[popovertarget]");
-      buttons.forEach((button) =>
-        button.addEventListener("click", () => {
-          const id = button.getAttribute("popovertarget");
+      const toggleButtons = document.querySelectorAll(
+        "button[popovertargetaction='toggle']"
+      );
+      toggleButtons.forEach((toggleButton) =>
+        toggleButton.addEventListener("click", () => {
+          const id = toggleButton.getAttribute("popovertarget");
           const element = document.getElementById(id);
-          if (element.getAttribute("show") === "") {
+          if (element?.getAttribute("show") === "") {
             element.removeAttribute("show");
           } else {
-            element.setAttribute("show", "");
+            element?.setAttribute("show", "");
           }
+        })
+      );
+
+      const hideButtons = document.querySelectorAll(
+        "button[popovertargetaction='hide']"
+      );
+      hideButtons.forEach((hideButton) =>
+        hideButton.addEventListener("click", () => {
+          const id = hideButton.getAttribute("popovertarget");
+          const element = document.getElementById(id);
+          element?.removeAttribute("show");
         })
       );
     }
@@ -111,7 +124,9 @@ const whitePeopleLabel = "waarom witten mensen";
     line-height: 1.4;
     padding: 1em;
     margin-trim: block;
+    background-color: #eeeeee;
   }
+
   [popover] :is(h1, h2, h3, h4, h5) {
     line-height: 1.1;
   }
