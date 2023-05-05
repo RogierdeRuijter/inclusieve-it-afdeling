@@ -16,10 +16,10 @@ const moreDetailLabel = "meer detail";
           const id = toggleButton.getAttribute("popovertarget");
           if (id) {
             const element = document.getElementById(id);
-            if (element?.getAttribute("show") === "") {
-              element.removeAttribute("show");
+            if (element?.getAttribute("open") === "") {
+              element.removeAttribute("open");
             } else {
-              element?.setAttribute("show", "");
+              element?.setAttribute("open", "");
             }
           }
         })
@@ -33,7 +33,7 @@ const moreDetailLabel = "meer detail";
           const id = hideButton.getAttribute("popovertarget");
           if (id) {
             const element = document.getElementById(id);
-            element?.removeAttribute("show");
+            element?.removeAttribute("open");
           }
         })
       );
@@ -56,7 +56,7 @@ const moreDetailLabel = "meer detail";
       >) helpen die hun IT afdeling inclusiever willen maken. Door mijn eigen
       ervaring te delen.
     </p>
-    <div id="waarom-witte-mensen" popover>
+    <dialog id="waarom-witte-mensen" popover>
       <h4>{whitePeopleLabel}</h4>
       <p>
         Ik denk dat de oplossing voor ons huidige diveristeits probleem binnen
@@ -69,7 +69,7 @@ const moreDetailLabel = "meer detail";
       <button popovertarget="waarom-witte-mensen" popovertargetaction="hide"
         >sluit uitleg</button
       >
-    </div>
+    </dialog>
     <h3>Hoe inclusiever</h3>
     <p>
       Hieronder zullen verschillende stappen worden weergegeven hoe jij jou IT
@@ -108,7 +108,7 @@ const moreDetailLabel = "meer detail";
         </li>
         <li>Welke grenzen stel jij voor jezelf op werk?</li>
       </ul>
-      <div id="meer-detail" popover>
+      <dialog id="meer-detail" popover>
         <h4>{moreDetailLabel}</h4>
         <div>
           <p>
@@ -128,7 +128,7 @@ const moreDetailLabel = "meer detail";
         <button popovertarget="meer-detail" popovertargetaction="hide"
           >sluit uitleg</button
         >
-      </div>
+      </dialog>
     </p>
   </main>
 </Layout>
@@ -165,6 +165,7 @@ const moreDetailLabel = "meer detail";
     }
   }
   [popover] {
+    position: static;
     border: 3px solid black;
     max-width: 60ch;
     line-height: 1.4;
@@ -182,7 +183,7 @@ const moreDetailLabel = "meer detail";
 
   /* This is to prevent a content shift before the polyfill loads */
   @supports not selector([popover]:open) {
-    [popover]:not([show]) {
+    [popover]:not([open]) {
       display: none;
     }
   }
