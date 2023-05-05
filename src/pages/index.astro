@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 const whitePeopleLabel = "waarom witten mensen";
+const moreDetailLabel = "meer detail";
 ---
 
 <Layout title="Een inclusieve IT afdeling">
@@ -57,14 +58,14 @@ const whitePeopleLabel = "waarom witten mensen";
     </p>
     <div id="waarom-witte-mensen" popover>
       <h4>{whitePeopleLabel}</h4>
-      <div>
+      <p>
         Ik denk dat de oplossing voor ons huidige diveristeits probleem binnen
         de IT wereld moet komen van de mensen die nu de macht hebben binnen deze
         plekken. Dit zijn momenteel witte mensen, daarom is deze essay gericht
         op witte mensen. Wij moeten een oplossingen vinden hoe wij de plekken
         waar wij werken fijnere werkplekken maken voor mensen uit
         gemarganisaliseerde groepen.
-      </div>
+      </p>
       <button popovertarget="waarom-witte-mensen" popovertargetaction="hide"
         >sluit uitleg</button
       >
@@ -96,12 +97,38 @@ const whitePeopleLabel = "waarom witten mensen";
       zijn altijd verschillen die vaak onderbelicht blijven. Door deze
       verschillen te belichten creeer je bewust zijn bij de afdeling hierover.
       Als dit de cultuur is dan zal het makkelijker zijn om mensen met een
-      diversere achtergrond het gevoel te geven dat ze erbij horen.
-      Opdrachten die je kan gebruiken om de diveristeit in de groep naar boven te halen.
+      diversere achtergrond het gevoel te geven dat ze erbij horen. Opdrachten
+      die je kan gebruiken om de diveristeit in de groep naar boven te halen.
       <ul>
-        <li>Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd?</li>
+        <li>
+          Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
+            popovertarget="meer-detail"
+            popovertargetaction="toggle">{moreDetailLabel}</button
+          >
+        </li>
         <li>Welke grenzen stel jij voor jezelf op werk?</li>
       </ul>
+      <div id="meer-detail" popover>
+        <h4>{moreDetailLabel}</h4>
+        <div>
+          <p>
+            Heb een gesprek met de collega waar je het meest mee samen werk. Doe
+            deze oefening eerst met deze persoon. Als dit goed gaat. Doe het dan
+            met 3 a 4 collegas. Het is vooral belangrijk dat je in deze fase
+            niet praat over oplossingen voor eventuele problemen, maar vooral
+            antwoord geeft op de vragen en hoe je dit nu ervaart. Later in het
+            process kan je het hebben over oplossingen.
+          </p>
+          <p>
+            De IT wereld wordt gedomineerd door mannen, mannen hebben de nijging 
+            snel in oplossingen te denken. Probeer hier voor te waken en juist een
+            plek te creeeren tijdens deze oefening op naar elkaar te luisteren.
+          </p>
+        </div>
+        <button popovertarget="meer-detail" popovertargetaction="hide"
+          >sluit uitleg</button
+        >
+      </div>
     </p>
   </main>
 </Layout>
