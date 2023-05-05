@@ -13,11 +13,13 @@ const whitePeopleLabel = "waarom witten mensen";
       toggleButtons.forEach((toggleButton) =>
         toggleButton.addEventListener("click", () => {
           const id = toggleButton.getAttribute("popovertarget");
-          const element = document.getElementById(id);
-          if (element?.getAttribute("show") === "") {
-            element.removeAttribute("show");
-          } else {
-            element?.setAttribute("show", "");
+          if (id) {
+            const element = document.getElementById(id);
+            if (element?.getAttribute("show") === "") {
+              element.removeAttribute("show");
+            } else {
+              element?.setAttribute("show", "");
+            }
           }
         })
       );
@@ -28,8 +30,10 @@ const whitePeopleLabel = "waarom witten mensen";
       hideButtons.forEach((hideButton) =>
         hideButton.addEventListener("click", () => {
           const id = hideButton.getAttribute("popovertarget");
-          const element = document.getElementById(id);
-          element?.removeAttribute("show");
+          if (id) {
+            const element = document.getElementById(id);
+            element?.removeAttribute("show");
+          }
         })
       );
     }
