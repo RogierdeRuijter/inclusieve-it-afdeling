@@ -167,8 +167,10 @@ const moreDetailLabel = "meer detail";
   [popover] {
     position: static;
     clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%);
-    border-block: 3px solid black;
-    border-inline: 0;
+    border-block-start: 0;
+    border-block-end: 3px solid black;
+    border-inline-start: 3px solid black;
+    border-inline-end: 0;
     max-width: 60ch;
     line-height: 1.4;
     padding: 1em;
