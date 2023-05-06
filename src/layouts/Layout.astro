@@ -30,8 +30,20 @@ const { title } = Astro.props;
     );
   }
   html {
+    --background-color: #f6f6f6; 
+    --text-color: black;
+    --popover-background-color: #eeeeee;
     font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  @media (prefers-color-scheme: dark) { 
+    html {
+      --background-color: hsl(0, 0%, 7%);
+      --text-color: hsl(37, 60%, 93%);
+      --popover-background-color: hsl(0, 0%, 14%);
+      --popover-text-color: var(--text-color);
+    }
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
