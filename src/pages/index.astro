@@ -40,8 +40,6 @@ const moreDetailLabel = "meer detail";
     }
   </script>
   <main>
-    <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
-    <h2>Door deze stappen te volgen</h2>
     <p>
       Op deze pagina probeer ik hetzelfde te bereiken als <a
         href="https://nl.wikipedia.org/wiki/Virgil_Abloh">Viril Abloh</a
@@ -49,6 +47,8 @@ const moreDetailLabel = "meer detail";
       "Free Game" geeft hij mentoorschap aan jonge zwarte mensen bij het
       opstraten van een merk.
     </p>
+    <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
+    <h2>Door deze stappen te volgen</h2>
     <p>
       Ik wil jonge witte mensen (<button
         popovertarget="waarom-witte-mensen"
@@ -131,6 +131,10 @@ const moreDetailLabel = "meer detail";
       </dialog>
     </p>
   </main>
+  <script>
+    const mainHeading = document.querySelector("h1");
+    mainHeading.scrollIntoView(true);
+  </script>
 </Layout>
 
 <style>
