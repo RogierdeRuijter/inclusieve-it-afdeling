@@ -47,6 +47,7 @@ const moreDetailLabel = "meer detail";
       "Free Game" geeft hij mentoorschap aan jonge zwarte mensen bij het
       opstraten van een merk.
     </p>
+    <section>
     <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
     <h2>Door deze stappen te volgen</h2>
     <p>
@@ -131,8 +132,9 @@ const moreDetailLabel = "meer detail";
       </dialog>
     </p>
   </main>
+</section>
   <script>
-    const mainHeading = document.querySelector("h1");
+    const mainHeading = document.querySelector("section");
     mainHeading.scrollIntoView(true);
   </script>
 </Layout>
@@ -140,11 +142,13 @@ const moreDetailLabel = "meer detail";
 <style>
   main {
     margin: auto;
-    padding: 1.5rem;
+    padding-inline: 1.5rem;
     max-width: 80ch;
     line-height: 1.4;
   }
-
+  section {
+    padding-block: 1.5rem;
+  }
   h1,
   h2,
   h3,
