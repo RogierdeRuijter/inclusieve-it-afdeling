@@ -145,9 +145,17 @@ const moreDetailLabel = "meer detail";
     padding-inline: 1.5rem;
     max-width: 80ch;
     line-height: 1.4;
+    
   }
   section {
     padding-block: 1.5rem;
+    margin-trim: block;
+  }
+
+  @supports not (margin-trim: block) {
+    h1 {
+      margin-block-start: 0;
+    }
   }
   h1,
   h2,
@@ -158,7 +166,6 @@ const moreDetailLabel = "meer detail";
   h1 {
     font-size: 3rem;
     font-weight: 800;
-    margin: 0;
   }
   [popover]::backdrop {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
