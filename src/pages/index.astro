@@ -233,6 +233,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
   /* This is to prevent a content shift before the polyfill loads */
   @supports not selector([popover]:open) {
     [popover] {
+      /* Overwrite dialog positon absolute */
       position: static;
     }
     [popover]:not([open]) {
