@@ -82,92 +82,98 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
         </p>
       </section>
       <!-- TODO: vind een manier om 1. hier in te verwerken -->
-      <h3 class="spacial-heading">
-        <span>Beoordeel de beschrijving van jou functie</span>
-      </h3>
-      <p>
-        Vraag de beschrijving van jou functie op bij de gene die deze heeft
-        (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
-        bedrijf).
-      </p>
-      <p>
-        Welke kwaliteiten staan hier beschreven die nodig zijn om de functie te
-        vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
-        beschouwd? <button
-          popovertarget="hoe-was-dit-bij-de-vpro"
-          popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
-        >
-      </p>
-      <dialog id="hoe-was-dit-bij-de-vpro" popover>
-        <h4>{howWasThisAtTheVPROLabel}</h4>
+      <section>
+        <h3 class="spacial-heading">
+          <span>Beoordeel de beschrijving van jou functie</span>
+        </h3>
         <p>
-          Bij de VPRO stonden er de volgende kwaliteiten op de functie van
-          senior frontend developer. Je moet goed mensen kunnen overtuigen van
-          jou ideeen, binnen en buiten de afdeling (een mannelijke kwaliteit).
-          Je moet een groot netwerk hebben binnen de industrie (een mannelijke
-          kwaliteit).
+          Vraag de beschrijving van jou functie op bij de gene die deze heeft
+          (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
+          bedrijf).
         </p>
-        <button
-          popovertarget="hoe-was-dit-bij-de-vpro"
-          popovertargetaction="hide">sluit uitleg</button
-        >
-      </dialog>
-      <p>
-        Kijk of je hier een diverser beeld van kan maken. Vaak zijn kwaliteiten
-        die niet worden meegenomen in programeer banen dingen als.
-        <ul>
-          <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
-          <li>
-            Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
-            wordt?
-          </li>
-        </ul>
-      </p>
-      <!-- Vind een manier om 2. in het design te verwerken  -->
-      <h3 class="spacial-heading">
-        <span>Belicht diveristeit binnen huidige groep</span>
-      </h3>
-      <p>
-        Zoek naar manieren om binnen de huidige groep de diveristeit die er al
-        is te belichten. Dit helpt om te belichten dat er altijd veel verschil
-        is tussen de mensen. Het maakt vaak niet uit dat ze er hetzelfde uitzien
-        er zijn altijd verschillen die vaak onderbelicht blijven. Door deze
-        verschillen te belichten creeer je bewust zijn bij de afdeling hierover.
-        Als dit de cultuur is dan zal het makkelijker zijn om mensen met een
-        diversere achtergrond het gevoel te geven dat ze erbij horen. Opdrachten
-        die je kan gebruiken om de diveristeit in de groep naar boven te halen.
-        <ul>
-          <li>
-            Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
-              popovertarget="meer-detail"
-              popovertargetaction="toggle">{moreDetailLabel}</button
-            >
-          </li>
-          <li>Welke grenzen stel jij voor jezelf op werk?</li>
-        </ul>
-        <dialog id="meer-detail" popover>
-          <h4>{moreDetailLabel}</h4>
-          <div>
-            <p>
-              Heb een gesprek met de collega waar je het meest mee samen werk.
-              Doe deze oefening eerst met deze persoon. Als dit goed gaat. Doe
-              het dan met 3 a 4 collegas. Het is vooral belangrijk dat je in
-              deze fase niet praat over oplossingen voor eventuele problemen,
-              maar vooral antwoord geeft op de vragen en hoe je dit nu ervaart.
-              Later in het process kan je het hebben over oplossingen.
-            </p>
-            <p>
-              De IT wereld wordt gedomineerd door mannen, mannen hebben de
-              nijging snel in oplossingen te denken. Probeer hier voor te waken
-              en juist een plek te creeeren tijdens deze oefening op naar elkaar
-              te luisteren.
-            </p>
-          </div>
-          <button popovertarget="meer-detail" popovertargetaction="hide"
-            >sluit uitleg</button
+        <p>
+          Welke kwaliteiten staan hier beschreven die nodig zijn om de functie
+          te vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
+          beschouwd? <button
+            popovertarget="hoe-was-dit-bij-de-vpro"
+            popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
+          >
+        </p>
+        <dialog id="hoe-was-dit-bij-de-vpro" popover>
+          <h4>{howWasThisAtTheVPROLabel}</h4>
+          <p>
+            Bij de VPRO stonden er de volgende kwaliteiten op de functie van
+            senior frontend developer. Je moet goed mensen kunnen overtuigen van
+            jou ideeen, binnen en buiten de afdeling (een mannelijke kwaliteit).
+            Je moet een groot netwerk hebben binnen de industrie (een mannelijke
+            kwaliteit).
+          </p>
+          <button
+            popovertarget="hoe-was-dit-bij-de-vpro"
+            popovertargetaction="hide">sluit uitleg</button
           >
         </dialog>
-      </p>
+        <p>
+          Kijk of je hier een diverser beeld van kan maken. Vaak zijn
+          kwaliteiten die niet worden meegenomen in programeer banen dingen als.
+          <ul>
+            <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
+            <li>
+              Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
+              wordt?
+            </li>
+          </ul>
+        </p>
+      </section>
+      <!-- Vind een manier om 2. in het design te verwerken  -->
+      <section>
+        <h3 class="spacial-heading">
+          <span>Belicht diveristeit binnen huidige groep</span>
+        </h3>
+        <p>
+          Zoek naar manieren om binnen de huidige groep de diveristeit die er al
+          is te belichten. Dit helpt om te belichten dat er altijd veel verschil
+          is tussen de mensen. Het maakt vaak niet uit dat ze er hetzelfde
+          uitzien er zijn altijd verschillen die vaak onderbelicht blijven. Door
+          deze verschillen te belichten creeer je bewust zijn bij de afdeling
+          hierover. Als dit de cultuur is dan zal het makkelijker zijn om mensen
+          met een diversere achtergrond het gevoel te geven dat ze erbij horen.
+          Opdrachten die je kan gebruiken om de diveristeit in de groep naar
+          boven te halen.
+          <ul>
+            <li>
+              Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
+                popovertarget="meer-detail"
+                popovertargetaction="toggle">{moreDetailLabel}</button
+              >
+            </li>
+            <li>Welke grenzen stel jij voor jezelf op werk?</li>
+          </ul>
+          <dialog id="meer-detail" popover>
+            <h4>{moreDetailLabel}</h4>
+            <div>
+              <p>
+                Heb een gesprek met de collega waar je het meest mee samen werk.
+                Doe deze oefening eerst met deze persoon. Als dit goed gaat. Doe
+                het dan met 3 a 4 collegas. Het is vooral belangrijk dat je in
+                deze fase niet praat over oplossingen voor eventuele problemen,
+                maar vooral antwoord geeft op de vragen en hoe je dit nu
+                ervaart. Later in het process kan je het hebben over
+                oplossingen.
+              </p>
+              <p>
+                De IT wereld wordt gedomineerd door mannen, mannen hebben de
+                nijging snel in oplossingen te denken. Probeer hier voor te
+                waken en juist een plek te creeeren tijdens deze oefening op
+                naar elkaar te luisteren.
+              </p>
+            </div>
+            <button popovertarget="meer-detail" popovertargetaction="hide"
+              >sluit uitleg</button
+            >
+          </dialog>
+        </p>
+      </section>
     </section>
   </main>
   <script>
@@ -189,11 +195,8 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     margin-trim: block;
     padding-block-end: var(--spacing-document);
   }
-
-  @supports not (margin-trim: block) {
-    h1 {
-      margin-block-start: 0;
-    }
+  section > section {
+    border-block-start: 4px solid;
   }
   h1,
   h2,
@@ -247,15 +250,12 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     }
   }
   .intro {
-    --border-size: 4px;
-
     height: 100vh;
-    height: calc(100svh + var(--border-size));
+    height: 100svh;
     display: grid;
     justify-content: space-evenly;
     grid-template-rows: min-content 1fr min-content;
     padding-block-start: var(--spacing-document);
-    border-block: var(--border-size) solid;
     container-type: size;
   }
   .intro > h1 {
