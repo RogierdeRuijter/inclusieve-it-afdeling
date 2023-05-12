@@ -72,7 +72,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     <section>
       <section class="intro">
         <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
-        <h2>Door deze opdrachten te doen met je team</h2>
+        <h2 class="subtle">Door deze opdrachten te doen met je team</h2>
         <p>
           Ik zal in de opdrachten referenties maken naar hoe deze opdracht voor
           mij is gegaan tijdens mijn werktijd bij de VPRO. Door het delen van
@@ -84,6 +84,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
       <!-- TODO: vind een manier om 1. hier in te verwerken -->
       <section>
         <h3 class="spacial-heading">
+          <span class="subtle">1</span>
           <span>Beoordeel de beschrijving van jou functie</span>
         </h3>
         <p>
@@ -125,9 +126,9 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           </ul>
         </p>
       </section>
-      <!-- Vind een manier om 2. in het design te verwerken  -->
       <section>
         <h3 class="spacial-heading">
+          <span class="subtle">2</span>
           <span>Belicht diveristeit binnen huidige groep</span>
         </h3>
         <p>
@@ -249,6 +250,9 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
       display: none;
     }
   }
+  .subtle {
+    font-weight: 300;
+  }
   .intro {
     height: 100vh;
     height: 100svh;
@@ -276,14 +280,18 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
   }
 
   .spacial-heading {
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content;
     height: 60vh;
-    align-items: center;
     /* TODO: have fallback for unsuporrted container query units */
     container-type: size;
-    justify-content: center;
   }
   .spacial-heading span {
     font-size: 4cqmax;
+  }
+
+  .spacial-heading span:nth-of-type(2) {
+    justify-self: center;
+    align-self: center;
   }
 </style>
