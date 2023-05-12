@@ -70,16 +70,21 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
       >
     </dialog>
     <section>
-      <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
-      <h2 class="sub-heading">Door deze opdrachten te doen met je team</h2>
-      <p>
-        Ik zal in de opdrachten referenties maken naar hoe deze opdracht voor
-        mij is gegaan tijdens mijn werktijd bij de VPRO. Door het delen van deze
-        ervaringen hoop ik dat de opdrachten beter uitvoerbaar worden voor
-        jezelf. En ook een beetje voor de juice, because who doesn't love een
-        beetje juice.
-      </p>
-      <h3>1. Beoordeel de beschrijving van jou functie</h3>
+      <section class="intro">
+        <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
+        <h2>Door deze opdrachten te doen met je team</h2>
+        <p>
+          Ik zal in de opdrachten referenties maken naar hoe deze opdracht voor
+          mij is gegaan tijdens mijn werktijd bij de VPRO. Door het delen van
+          deze ervaringen hoop ik dat de opdrachten beter uitvoerbaar worden
+          voor jezelf. En ook een beetje voor de juice, because who doesn't love
+          een beetje juice.
+        </p>
+      </section>
+      <!-- TODO: vind een manier om 1. hier in te verwerken -->
+      <h3 class="spacial-heading">
+        <span>Beoordeel de beschrijving van jou functie</span>
+      </h3>
       <p>
         Vraag de beschrijving van jou functie op bij de gene die deze heeft
         (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
@@ -118,7 +123,10 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           </li>
         </ul>
       </p>
-      <h3>2. Belicht diveristeit binnen huidige groep</h3>
+      <!-- Vind een manier om 2. in het design te verwerken  -->
+      <h3 class="spacial-heading">
+        <span>Belicht diveristeit binnen huidige groep</span>
+      </h3>
       <p>
         Zoek naar manieren om binnen de huidige groep de diveristeit die er al
         is te belichten. Dit helpt om te belichten dat er altijd veel verschil
@@ -175,10 +183,11 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     max-width: 80ch;
     line-height: 1.5;
     font-size: 1.1em;
+    --spacing-document: 1.5rem;
   }
-  section {
-    padding-block: 1.5rem;
+  main > section {
     margin-trim: block;
+    padding-block-end: var(--spacing-document);
   }
 
   @supports not (margin-trim: block) {
@@ -196,9 +205,6 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
-  }
-  .sub-heading {
-    font-weight: 300;
   }
   [popover]::backdrop {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
@@ -239,5 +245,45 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     [popover]:not([open]) {
       display: none;
     }
+  }
+  .intro {
+    --border-size: 4px;
+
+    height: 100vh;
+    height: calc(100svh + var(--border-size));
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-rows: min-content 1fr min-content;
+    padding-block-start: var(--spacing-document);
+    border-block: var(--border-size) solid;
+    container-type: size;
+  }
+  .intro > h1 {
+    font-size: 9cqmin;
+    order: 2;
+    align-self: center;
+    transform: rotate(-3deg);
+  }
+  .intro > h2 {
+    order: 1;
+    font-size: 4cqmin;
+  }
+  .intro > p {
+    order: 3;
+  }
+  .sub-heading {
+    font-weight: 300;
+  }
+
+  .spacial-heading {
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    /* TODO: have fallback for unsuporrted container query units */
+    container-type: size;
+    justify-content: center;
+  }
+  .spacial-heading span {
+    font-size: 4cqmax;
   }
 </style>
