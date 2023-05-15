@@ -41,36 +41,38 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     }
   </script>
   <main>
-    <p>
-      Op deze pagina probeer ik hetzelfde te bereiken als <a
-        href="https://nl.wikipedia.org/wiki/Virgil_Abloh">Viril Abloh</a
-      > met <a href="https://virgilabloh.com/free-game/">Free Game</a>. In de
-      "Free Game" geeft hij mentoorschap aan jonge zwarte mensen bij het
-      opstraten van een merk.
-    </p>
-    <p>
-      Ik wil jonge witte mensen (<button
-        popovertarget="waarom-witte-mensen"
-        popovertargetaction="toggle">{whitePeopleLabel}</button
-      >) helpen die hun IT afdeling inclusiever willen maken. Door mijn eigen
-      ervaring te delen.
-    </p>
-    <dialog id="waarom-witte-mensen" popover>
-      <h4>{whitePeopleLabel}</h4>
+    <article>
       <p>
-        Ik denk dat de oplossing voor ons huidige diveristeits probleem binnen
-        de IT wereld moet komen van de mensen die nu de macht hebben binnen deze
-        plekken. Dit zijn momenteel witte mensen, daarom is deze essay gericht
-        op witte mensen. Wij moeten een oplossingen vinden hoe wij de plekken
-        waar wij werken fijnere werkplekken maken voor mensen uit
-        gemarganisaliseerde groepen.
+        Op deze pagina probeer ik hetzelfde te bereiken als <a
+          href="https://nl.wikipedia.org/wiki/Virgil_Abloh">Viril Abloh</a
+        > met <a href="https://virgilabloh.com/free-game/">Free Game</a>. In de
+        "Free Game" geeft hij mentoorschap aan jonge zwarte mensen bij het
+        opstraten van een merk.
       </p>
-      <button popovertarget="waarom-witte-mensen" popovertargetaction="hide"
-        >sluit uitleg</button
-      >
-    </dialog>
-    <section>
-      <section class="intro">
+      <p>
+        Ik wil jonge witte mensen (<button
+          popovertarget="waarom-witte-mensen"
+          popovertargetaction="toggle">{whitePeopleLabel}</button
+        >) helpen die hun IT afdeling inclusiever willen maken. Door mijn eigen
+        ervaring te delen.
+      </p>
+      <dialog id="waarom-witte-mensen" popover>
+        <h4>{whitePeopleLabel}</h4>
+        <p>
+          Ik denk dat de oplossing voor ons huidige diveristeits probleem binnen
+          de IT wereld moet komen van de mensen die nu de macht hebben binnen
+          deze plekken. Dit zijn momenteel witte mensen, daarom is deze essay
+          gericht op witte mensen. Wij moeten een oplossingen vinden hoe wij de
+          plekken waar wij werken fijnere werkplekken maken voor mensen uit
+          gemarganisaliseerde groepen.
+        </p>
+        <button popovertarget="waarom-witte-mensen" popovertargetaction="hide"
+          >sluit uitleg</button
+        >
+      </dialog>
+    </article>
+    <div>
+      <article class="intro">
         <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
         <h2 class="subtle">Door deze opdrachten te doen met je team</h2>
         <p>
@@ -80,105 +82,109 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           voor jezelf. En ook een beetje voor de juice, because who doesn't love
           een beetje juice.
         </p>
-      </section>
-      <!-- TODO: vind een manier om 1. hier in te verwerken -->
-      <section>
+      </article>
+      <article>
         <h3 class="spacial-heading">
           <span class="subtle">1</span>
           <span>Beoordeel de beschrijving van jou functie</span>
         </h3>
-        <p>
-          Vraag de beschrijving van jou functie op bij de gene die deze heeft
-          (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
-          bedrijf).
-        </p>
-        <p>
-          Welke kwaliteiten staan hier beschreven die nodig zijn om de functie
-          te vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
-          beschouwd? <button
-            popovertarget="hoe-was-dit-bij-de-vpro"
-            popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
-          >
-        </p>
-        <dialog id="hoe-was-dit-bij-de-vpro" popover>
-          <h4>{howWasThisAtTheVPROLabel}</h4>
+        <div>
           <p>
-            Bij de VPRO stonden er de volgende kwaliteiten op de functie van
-            senior frontend developer. Je moet goed mensen kunnen overtuigen van
-            jou ideeen, binnen en buiten de afdeling (een mannelijke kwaliteit).
-            Je moet een groot netwerk hebben binnen de industrie (een mannelijke
-            kwaliteit).
+            Vraag de beschrijving van jou functie op bij de gene die deze heeft
+            (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
+            bedrijf).
           </p>
-          <button
-            popovertarget="hoe-was-dit-bij-de-vpro"
-            popovertargetaction="hide">sluit uitleg</button
-          >
-        </dialog>
-        <p>
-          Kijk of je hier een diverser beeld van kan maken. Vaak zijn
-          kwaliteiten die niet worden meegenomen in programeer banen dingen als.
-          <ul>
-            <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
-            <li>
-              Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
-              wordt?
-            </li>
-          </ul>
-        </p>
-      </section>
-      <section>
+          <p>
+            Welke kwaliteiten staan hier beschreven die nodig zijn om de functie
+            te vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
+            beschouwd? <button
+              popovertarget="hoe-was-dit-bij-de-vpro"
+              popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
+            >
+          </p>
+          <dialog id="hoe-was-dit-bij-de-vpro" popover>
+            <h4>{howWasThisAtTheVPROLabel}</h4>
+            <p>
+              Bij de VPRO stonden er de volgende kwaliteiten op de functie van
+              senior frontend developer. Je moet goed mensen kunnen overtuigen
+              van jou ideeen, binnen en buiten de afdeling (een mannelijke
+              kwaliteit). Je moet een groot netwerk hebben binnen de industrie
+              (een mannelijke kwaliteit).
+            </p>
+            <button
+              popovertarget="hoe-was-dit-bij-de-vpro"
+              popovertargetaction="hide">sluit uitleg</button
+            >
+          </dialog>
+          <p>
+            Kijk of je hier een diverser beeld van kan maken. Vaak zijn
+            kwaliteiten die niet worden meegenomen in programeer banen dingen
+            als.
+            <ul>
+              <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
+              <li>
+                Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
+                wordt?
+              </li>
+            </ul>
+          </p>
+        </div>
+      </article>
+      <article>
         <h3 class="spacial-heading">
           <span class="subtle">2</span>
           <span>Belicht diveristeit binnen huidige groep</span>
         </h3>
-        <p>
-          Zoek naar manieren om binnen de huidige groep de diveristeit die er al
-          is te belichten. Dit helpt om te belichten dat er altijd veel verschil
-          is tussen de mensen. Het maakt vaak niet uit dat ze er hetzelfde
-          uitzien er zijn altijd verschillen die vaak onderbelicht blijven. Door
-          deze verschillen te belichten creeer je bewust zijn bij de afdeling
-          hierover. Als dit de cultuur is dan zal het makkelijker zijn om mensen
-          met een diversere achtergrond het gevoel te geven dat ze erbij horen.
-          Opdrachten die je kan gebruiken om de diveristeit in de groep naar
-          boven te halen.
-          <ul>
-            <li>
-              Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
-                popovertarget="meer-detail"
-                popovertargetaction="toggle">{moreDetailLabel}</button
+        <div>
+          <p>
+            Zoek naar manieren om binnen de huidige groep de diveristeit die er
+            al is te belichten. Dit helpt om te belichten dat er altijd veel
+            verschil is tussen de mensen. Het maakt vaak niet uit dat ze er
+            hetzelfde uitzien er zijn altijd verschillen die vaak onderbelicht
+            blijven. Door deze verschillen te belichten creeer je bewust zijn
+            bij de afdeling hierover. Als dit de cultuur is dan zal het
+            makkelijker zijn om mensen met een diversere achtergrond het gevoel
+            te geven dat ze erbij horen. Opdrachten die je kan gebruiken om de
+            diveristeit in de groep naar boven te halen.
+            <ul>
+              <li>
+                Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
+                  popovertarget="meer-detail"
+                  popovertargetaction="toggle">{moreDetailLabel}</button
+                >
+              </li>
+              <li>Welke grenzen stel jij voor jezelf op werk?</li>
+            </ul>
+            <dialog id="meer-detail" popover>
+              <h4>{moreDetailLabel}</h4>
+              <div>
+                <p>
+                  Heb een gesprek met de collega waar je het meest mee samen
+                  werk. Doe deze oefening eerst met deze persoon. Als dit goed
+                  gaat. Doe het dan met 3 a 4 collegas. Het is vooral belangrijk
+                  dat je in deze fase niet praat over oplossingen voor eventuele
+                  problemen, maar vooral antwoord geeft op de vragen en hoe je
+                  dit nu ervaart. Later in het process kan je het hebben over
+                  oplossingen.
+                </p>
+                <p>
+                  De IT wereld wordt gedomineerd door mannen, mannen hebben de
+                  nijging snel in oplossingen te denken. Probeer hier voor te
+                  waken en juist een plek te creeeren tijdens deze oefening op
+                  naar elkaar te luisteren.
+                </p>
+              </div>
+              <button popovertarget="meer-detail" popovertargetaction="hide"
+                >sluit uitleg</button
               >
-            </li>
-            <li>Welke grenzen stel jij voor jezelf op werk?</li>
-          </ul>
-          <dialog id="meer-detail" popover>
-            <h4>{moreDetailLabel}</h4>
-            <div>
-              <p>
-                Heb een gesprek met de collega waar je het meest mee samen werk.
-                Doe deze oefening eerst met deze persoon. Als dit goed gaat. Doe
-                het dan met 3 a 4 collegas. Het is vooral belangrijk dat je in
-                deze fase niet praat over oplossingen voor eventuele problemen,
-                maar vooral antwoord geeft op de vragen en hoe je dit nu
-                ervaart. Later in het process kan je het hebben over
-                oplossingen.
-              </p>
-              <p>
-                De IT wereld wordt gedomineerd door mannen, mannen hebben de
-                nijging snel in oplossingen te denken. Probeer hier voor te
-                waken en juist een plek te creeeren tijdens deze oefening op
-                naar elkaar te luisteren.
-              </p>
-            </div>
-            <button popovertarget="meer-detail" popovertargetaction="hide"
-              >sluit uitleg</button
-            >
-          </dialog>
-        </p>
-      </section>
-    </section>
+            </dialog>
+          </p>
+        </div>
+      </article>
+    </div>
   </main>
   <script>
-    const mainHeading = document.querySelector("section");
+    const mainHeading = document.querySelector("main > div");
     mainHeading?.scrollIntoView();
   </script>
 </Layout>
@@ -192,11 +198,11 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     font-size: 1.1em;
     --spacing-document: 1.5rem;
   }
-  main > section {
+  main > div {
     margin-trim: block;
     padding-block-end: var(--spacing-document);
   }
-  section > section {
+  main > div > article {
     border-block-start: 4px solid;
   }
   h1,
@@ -231,6 +237,8 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     margin-trim: block;
     background-color: var(--popover-background-color);
     color: var(--popover-text-color);
+    max-height: 80vh;
+    max-height: 80dvh;
   }
   [popover] > button {
     display: block;
