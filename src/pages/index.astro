@@ -73,7 +73,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     </article>
     <div>
       <article class="intro">
-        <h1>Een inclusieve IT afdeling voor jou bedrijf</h1>
+        <h1>Een inclusieve IT omgeving voor jou bedrijf</h1>
         <h2 class="subtle">Door deze opdrachten te doen met je team</h2>
         <p>
           Ik zal in de opdrachten referenties maken naar hoe deze opdracht voor
@@ -89,46 +89,49 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           <span>Beoordeel de beschrijving van jou functie</span>
         </h3>
         <div>
-          <p>
-            Vraag de beschrijving van jou functie op bij de gene die deze heeft
-            (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
-            bedrijf).
-          </p>
-          <p>
-            Welke kwaliteiten staan hier beschreven die nodig zijn om de functie
-            te vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
-            beschouwd? <button
-              popovertarget="hoe-was-dit-bij-de-vpro"
-              popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
-            >
-          </p>
-          <dialog id="hoe-was-dit-bij-de-vpro" popover>
-            <h4>{howWasThisAtTheVPROLabel}</h4>
+          <div>
             <p>
-              Bij de VPRO stonden er de volgende kwaliteiten op de functie van
-              senior frontend developer. Je moet goed mensen kunnen overtuigen
-              van jou ideeen, binnen en buiten de afdeling (een mannelijke
-              kwaliteit). Je moet een groot netwerk hebben binnen de industrie
-              (een mannelijke kwaliteit).
+              Vraag de beschrijving van jou functie op bij de gene die deze
+              heeft (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas
+              van het bedrijf).
             </p>
-            <button
-              popovertarget="hoe-was-dit-bij-de-vpro"
-              popovertargetaction="hide">sluit uitleg</button
-            >
-          </dialog>
-          <p>
-            Kijk of je hier een diverser beeld van kan maken. Vaak zijn
-            kwaliteiten die niet worden meegenomen in programeer banen dingen
-            als.
-            <ul>
-              <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
-              <li>
-                Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
-                wordt?
-              </li>
-            </ul>
-          </p>
+            <p>
+              Welke kwaliteiten staan hier beschreven die nodig zijn om de
+              functie te vervullen? Zijn dit kwaliteiten die klassiek als
+              mannelijk worden beschouwd? <button
+                popovertarget="hoe-was-dit-bij-de-vpro"
+                popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
+              >
+            </p>
+            <dialog id="hoe-was-dit-bij-de-vpro" popover>
+              <h4>{howWasThisAtTheVPROLabel}</h4>
+              <p>
+                Bij de VPRO stonden er de volgende kwaliteiten op de functie van
+                senior frontend developer. Je moet goed mensen kunnen overtuigen
+                van jou ideeen, binnen en buiten de afdeling (een mannelijke
+                kwaliteit). Je moet een groot netwerk hebben binnen de industrie
+                (een mannelijke kwaliteit).
+              </p>
+              <button
+                popovertarget="hoe-was-dit-bij-de-vpro"
+                popovertargetaction="hide">sluit uitleg</button
+              >
+            </dialog>
+            <p>
+              Kijk of je hier een diverser beeld van kan maken. Vaak zijn
+              kwaliteiten die niet worden meegenomen in programeer banen dingen
+              als.
+              <ul>
+                <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
+                <li>
+                  Als er onenigheid in een team is zorg jij dan dat dit
+                  uitgepraat wordt?
+                </li>
+              </ul>
+            </p>
+          </div>
         </div>
+        <button>Show</button>
       </article>
       <article>
         <h3 class="spacial-heading">
@@ -257,6 +260,18 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     [popover]:not([open]) {
       display: none;
     }
+  }
+  article > div {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    padding: 2rem;
+  }
+  article > div > div {
+    overflow: hidden;
+  }
+  article > div:hover {
+    grid-template-rows: 1fr;
   }
   .subtle {
     font-weight: 300;
