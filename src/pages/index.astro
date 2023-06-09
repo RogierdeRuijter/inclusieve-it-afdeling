@@ -136,7 +136,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           <span>Belicht diveristeit binnen huidige groep</span>
         </h3>
         <div>
-          <p>
+        <p>
             Zoek naar manieren om binnen de huidige groep de diveristeit die er
             al is te belichten. Dit helpt om te belichten dat er altijd veel
             verschil is tussen de mensen. Het maakt vaak niet uit dat ze er
@@ -196,14 +196,12 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     max-width: 80ch;
     line-height: 1.5;
     font-size: 1.1em;
-    --spacing-document: 1.5rem;
-  }
-  main > div {
-    margin-trim: block;
-    padding-block-end: var(--spacing-document);
   }
   main > div > article {
     border-block-start: 4px solid;
+    margin-trim: block;
+    padding-block: 2rem;
+    padding-block: 2rlh;
   }
   h1,
   h2,
@@ -215,6 +213,16 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
+  }
+  p, ul {
+    margin-block: 1rem;
+    margin-block: 1rlh;
+  }
+  @media (pointer: coarse) {
+    button {
+      /* TODO: find a good way to customize the buttons on touch screens */
+      min-block-size: 44px;
+    }
   }
   [popover]::backdrop {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
@@ -260,6 +268,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
   }
   .subtle {
     font-weight: 300;
+    margin-block: 0;
   }
   .intro {
     height: 100vh;
@@ -267,7 +276,6 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     display: grid;
     justify-content: space-evenly;
     grid-template-rows: min-content 1fr min-content;
-    padding-block-start: var(--spacing-document);
     container-type: size;
   }
   .intro > h1 {
@@ -278,7 +286,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
   }
   .intro > h2 {
     order: 1;
-    font-size: 4cqmin;
+    font-size: max(4cqmin, 1rem);
   }
   .intro > p {
     order: 3;
@@ -293,6 +301,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     height: 60vh;
     /* TODO: have fallback for unsuporrted container query units */
     container-type: size;
+    margin-block: 0;
   }
   .spacial-heading span {
     font-size: 4cqmax;
