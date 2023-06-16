@@ -34,7 +34,7 @@ export class JourneyCollapsable extends HTMLElement {
                 justify-self: center;
             }
             
-            :host > div:nth-of-type(2) {
+            :host > div:last-of-type {
                 grid-row: 2;
                 background-color: var(--surface-1);
                 contain: strict;
@@ -46,7 +46,7 @@ export class JourneyCollapsable extends HTMLElement {
                 grid-row: 1/3;
             }
             
-            :host([open]) > div:nth-of-type(2) {
+            :host([open]) > div:last-of-type {
                 transition: all 300ms ease-out;
                 height: 0%;
                 opacity: 0;
