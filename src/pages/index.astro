@@ -6,6 +6,7 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
 ---
 
 <Layout title="Een inclusieve IT afdeling">
+  <script src="../components/collapsable.js"></script>
   <script>
     const supported = HTMLElement.prototype.hasOwnProperty("popover");
     if (!supported) {
@@ -39,13 +40,6 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
         })
       );
     }
-  </script>
-  <script>
-    document
-      .querySelector(".wrapper > button")
-      ?.addEventListener("click", (e) => {
-        e.target.parentElement?.setAttribute("open", "");
-      });
   </script>
   <main>
     <article>
@@ -95,17 +89,16 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           <span class="subtle">1</span>
           <span>Beoordeel de beschrijving van jou functie</span>
         </h3>
-        <div class="wrapper">
-          <div>
+          <journey-collapsable>
             <p>
-              Vraag de beschrijving van jou functie op bij de gene die deze
-              heeft (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas
-              van het bedrijf).
+              Vraag de beschrijving van jou functie op bij de gene die deze heeft
+              (bijvoorbeeld, hoofd van afdeling, persoonszaken of de baas van het
+              bedrijf).
             </p>
             <p>
-              Welke kwaliteiten staan hier beschreven die nodig zijn om de
-              functie te vervullen? Zijn dit kwaliteiten die klassiek als
-              mannelijk worden beschouwd? <button
+              Welke kwaliteiten staan hier beschreven die nodig zijn om de functie
+              te vervullen? Zijn dit kwaliteiten die klassiek als mannelijk worden
+              beschouwd? <button
                 popovertarget="hoe-was-dit-bij-de-vpro"
                 popovertargetaction="toggle">Hoe was dit bij de VPRO?</button
               >
@@ -131,14 +124,12 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
               <ul>
                 <li>Zorg jij dat elke stem gehoord wordt een meeting?</li>
                 <li>
-                  Als er onenigheid in een team is zorg jij dan dat dit
-                  uitgepraat wordt?
+                  Als er onenigheid in een team is zorg jij dan dat dit uitgepraat
+                  wordt?
                 </li>
               </ul>
             </p>
-          </div>
-          <div></div>
-          <button>open</button>
+          </journey-collapsable>
         </div>
       </article>
       <article>
@@ -146,51 +137,53 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
           <span class="subtle">2</span>
           <span>Belicht diveristeit binnen huidige groep</span>
         </h3>
-        <div>
-          <p>
-            Zoek naar manieren om binnen de huidige groep de diveristeit die er
-            al is te belichten. Dit helpt om te belichten dat er altijd veel
-            verschil is tussen de mensen. Het maakt vaak niet uit dat ze er
-            hetzelfde uitzien er zijn altijd verschillen die vaak onderbelicht
-            blijven. Door deze verschillen te belichten creeer je bewust zijn
-            bij de afdeling hierover. Als dit de cultuur is dan zal het
-            makkelijker zijn om mensen met een diversere achtergrond het gevoel
-            te geven dat ze erbij horen. Opdrachten die je kan gebruiken om de
-            diveristeit in de groep naar boven te halen.
-            <ul>
-              <li>
-                Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
-                  popovertarget="meer-detail"
-                  popovertargetaction="toggle">{moreDetailLabel}</button
+          <div>
+            <journey-collapsable>
+            <p>
+              Zoek naar manieren om binnen de huidige groep de diveristeit die
+              er al is te belichten. Dit helpt om te belichten dat er altijd
+              veel verschil is tussen de mensen. Het maakt vaak niet uit dat ze
+              er hetzelfde uitzien er zijn altijd verschillen die vaak
+              onderbelicht blijven. Door deze verschillen te belichten creeer je
+              bewust zijn bij de afdeling hierover. Als dit de cultuur is dan
+              zal het makkelijker zijn om mensen met een diversere achtergrond
+              het gevoel te geven dat ze erbij horen. Opdrachten die je kan
+              gebruiken om de diveristeit in de groep naar boven te halen.
+              <ul>
+                <li>
+                  Waardoor voel jij je gemotiveerd, veilig, en gewaardeerd? <button
+                    popovertarget="meer-detail"
+                    popovertargetaction="toggle">{moreDetailLabel}</button
+                  >
+                </li>
+                <li>Welke grenzen stel jij voor jezelf op werk?</li>
+              </ul>
+              <dialog id="meer-detail" popover>
+                <h4>{moreDetailLabel}</h4>
+                <div>
+                  <p>
+                    Heb een gesprek met de collega waar je het meest mee samen
+                    werk. Doe deze oefening eerst met deze persoon. Als dit goed
+                    gaat. Doe het dan met 3 a 4 collegas. Het is vooral
+                    belangrijk dat je in deze fase niet praat over oplossingen
+                    voor eventuele problemen, maar vooral antwoord geeft op de
+                    vragen en hoe je dit nu ervaart. Later in het process kan je
+                    het hebben over oplossingen.
+                  </p>
+                  <p>
+                    De IT wereld wordt gedomineerd door mannen, mannen hebben de
+                    nijging snel in oplossingen te denken. Probeer hier voor te
+                    waken en juist een plek te creeeren tijdens deze oefening op
+                    naar elkaar te luisteren.
+                  </p>
+                </div>
+                <button popovertarget="meer-detail" popovertargetaction="hide"
+                  >sluit uitleg</button
                 >
-              </li>
-              <li>Welke grenzen stel jij voor jezelf op werk?</li>
-            </ul>
-            <dialog id="meer-detail" popover>
-              <h4>{moreDetailLabel}</h4>
-              <div>
-                <p>
-                  Heb een gesprek met de collega waar je het meest mee samen
-                  werk. Doe deze oefening eerst met deze persoon. Als dit goed
-                  gaat. Doe het dan met 3 a 4 collegas. Het is vooral belangrijk
-                  dat je in deze fase niet praat over oplossingen voor eventuele
-                  problemen, maar vooral antwoord geeft op de vragen en hoe je
-                  dit nu ervaart. Later in het process kan je het hebben over
-                  oplossingen.
-                </p>
-                <p>
-                  De IT wereld wordt gedomineerd door mannen, mannen hebben de
-                  nijging snel in oplossingen te denken. Probeer hier voor te
-                  waken en juist een plek te creeeren tijdens deze oefening op
-                  naar elkaar te luisteren.
-                </p>
-              </div>
-              <button popovertarget="meer-detail" popovertargetaction="hide"
-                >sluit uitleg</button
-              >
-            </dialog>
-          </p>
-        </div>
+              </dialog>
+            </p>
+</journey-collapsable>
+          </div>
       </article>
     </div>
   </main>
@@ -203,14 +196,14 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
 <style>
   main {
     margin: auto;
-    padding-inline: 1.5rem;
+    padding: 1.5rem;
     max-width: 80ch;
     line-height: 1.5;
     font-size: 1.1em;
+    margin-trim: block;
   }
   main > div > article {
     border-block-start: 4px solid var(--text-1);
-    margin-trim: block;
     padding-block: 2rem;
     padding-block: 2rlh;
   }
@@ -314,38 +307,6 @@ const howWasThisAtTheVPROLabel = "hoe was dit bij de VPRO?";
     /* TODO: have fallback for unsuporrted container query units */
     container-type: size;
     margin-block: 0;
-  }
-
-  main > div > article > .wrapper {
-    display: grid;
-    grid-template-rows: 4lh;
-  }
-
-  main > div > article > .wrapper > * {
-    grid-column: 1;
-  }
-  main > div > article > .wrapper > div:first-of-type {
-    overflow: hidden;
-  }
-  main > div > article > .wrapper > button {
-    width: min-content;
-    justify-self: center;
-    margin-block-start: 1lh;
-  }
-  main > div > article > .wrapper > div:nth-of-type(2) {
-    grid-row: 2;
-    background-color: var(--surface-1);
-    contain: strict;
-    height: 100%;
-    align-self: end;
-  }
-  main > div > article > .wrapper[open] > div:first-of-type {
-    grid-row: 1/3;
-  }
-  main > div > article > .wrapper[open] > div:nth-of-type(2) {
-    transition: all 300ms ease-out;
-    height: 0%;
-    opacity: 0;
   }
   .spacial-heading span {
     font-size: 4cqmax;
