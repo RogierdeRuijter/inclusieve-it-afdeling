@@ -32,6 +32,8 @@ export class JourneyCollapsable extends HTMLElement {
             :host > button {
                 width: min-content;
                 justify-self: center;
+                margin-block-start: 1em;
+                margin-block-start: 1lh;
             }
             
             :host > div:last-of-type {
