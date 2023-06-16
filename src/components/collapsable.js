@@ -9,7 +9,7 @@ export class JourneyCollapsable extends HTMLElement {
 
     const overlay = document.createElement("div");
     const button = document.createElement("button");
-    button.innerHTML = "open";
+    button.innerHTML = '<svg width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>';
 
     const style = document.createElement("style");
     shadowRoot.append(container, overlay, button, style);
@@ -44,17 +44,28 @@ export class JourneyCollapsable extends HTMLElement {
             :host([open]) > div:first-of-type { 
                 grid-row: 1/3;
             }
+            
             :host([open]) > div:nth-of-type(2) {
                 transition: all 300ms ease-out;
                 height: 0%;
                 opacity: 0;
+            }
+
+            :host([open]) > button > svg {
+                transition: transform 1s ease-out;
+                transform: rotate(180deg);
             }
         `;
   }
 
   connectedCallback() {
     this.shadowRoot.querySelector("button")?.addEventListener("click", (e) => {
-      this.setAttribute("open", "");
+        if (this.getAttribute("open") !== "") {
+            this.setAttribute("open", "");
+        } else {
+            this.removeAttribute("open");
+        }
+      
     });
   }
 }
