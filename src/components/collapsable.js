@@ -18,6 +18,7 @@ export class JourneyCollapsable extends HTMLElement {
     style.textContent = `
             :host {
                 display: grid;
+                grid-template-rows: 4em;
                 grid-template-rows: 4lh;
             }
 
