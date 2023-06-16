@@ -1,20 +1,20 @@
 export class JourneyCollapsable extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        const shadowRoot = this.attachShadow({ mode: 'open' });
+    const shadowRoot = this.attachShadow({ mode: "open" });
 
-        const container = document.createElement('div');
-        container.appendChild(document.createElement('slot'));
+    const container = document.createElement("div");
+    container.appendChild(document.createElement("slot"));
 
-        const overlay = document.createElement('div');
-        const button = document.createElement('button');
-        button.innerHTML = "open";
+    const overlay = document.createElement("div");
+    const button = document.createElement("button");
+    button.innerHTML = "open";
 
-        const style = document.createElement('style');
-        shadowRoot.append(container, overlay, button, style);
+    const style = document.createElement("style");
+    shadowRoot.append(container, overlay, button, style);
 
-        style.textContent = `
+    style.textContent = `
             :host {
                 display: grid;
                 grid-template-rows: 4lh;
@@ -50,15 +50,13 @@ export class JourneyCollapsable extends HTMLElement {
                 opacity: 0;
             }
         `;
+  }
 
-    }
-
-    connectedCallback() {
-      this.shadowRoot.querySelector("button")
-        ?.addEventListener("click", (e) => {
-            this.setAttribute("open", "");
-        });
-    }
+  connectedCallback() {
+    this.shadowRoot.querySelector("button")?.addEventListener("click", (e) => {
+      this.setAttribute("open", "");
+    });
+  }
 }
 
 customElements.define("journey-collapsable", JourneyCollapsable);
