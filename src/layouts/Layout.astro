@@ -32,17 +32,21 @@ const { title } = Astro.props;
   body {
     margin: 0;
   }
+
   @supports not (color: oklch(99% 0.02 0)) {
     /* Add fallback swatches here that are used */
     html {
       --swatch-1: hsl(0, 0%, 98.8%);
       --swatch-2: hsl(0, 0%, 88.6%);
       --swatch-9: hsl(60, 1.5%, 13.1%);
-      --swatch-10: hsl(0, 0%, 6.7%);   
+      --swatch-10: hsl(0, 0%, 6.7%);
     }
   }
   html {
     --hue: 220;
+    /* Cool yellow color */
+    /* TODO: find a way to integrate this with the pallete */
+    /* oklch(95% 0.247 113.82) */
 
     --swatch-1: oklch(99% 0.02 var(--hue));
     --swatch-2: oklch(95% 0.05 var(--hue));
@@ -69,6 +73,7 @@ const { title } = Astro.props;
       --surface-1: var(--swatch-1);
       --surface-2: var(--swatch-2);
       --surface-3: var(--swatch-3);
+      --surface-10: var(--swatch-10);
     }
   }
   html {
